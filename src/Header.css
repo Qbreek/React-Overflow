@@ -1,7 +1,8 @@
-header {
+.app-header {
     display: flex;
     border-bottom: 1px solid #babfc5;
     justify-content: center;
+    background-color: white;
 }
 
 .header-items-container {
@@ -23,7 +24,7 @@ header {
     display: none;
 }
 
-nav {
+.header-nav {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -58,7 +59,7 @@ nav {
         gap: 0.5rem;
     }
 
-    nav {
+    .header-nav {
         display: none;
     }
 }

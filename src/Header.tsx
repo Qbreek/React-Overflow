@@ -16,7 +16,7 @@ import {
 
 export function Header() {
     return (
-        <header>
+        <header className="app-header">
             <section className="header-items-container">
                 <ul className="desktop-list-anchors">
                     <Link>
@@ -70,7 +70,7 @@ export function Header() {
                         _placeholder={{ color: 'gray.900' }}
                     />
                 </InputGroup>
-                <nav className="desktop-nav">
+                <nav className="header-nav">
                     <Link
                         style={{
                             display: 'inline-flex',
