@@ -1,10 +1,23 @@
-import { Box, Card, CardBody, CardHeader, Flex, Heading, Link, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, CardHeader, Flex, Heading, Link } from '@chakra-ui/react';
 import './SidebarItems.css';
 
 export const SidebarItems = () => (
     <section>
-        <Card style={{ border: '1px solid #f4d27b', boxShadow: 'none' }}>
-            <CardHeader style={{ borderBottom: '1px solid #f4d27b', backgroundColor: '#f9ebc8' }}>
+        <Card
+            style={{
+                border: '1px solid #f4d27b',
+                boxShadow: 'none',
+                borderBottomLeftRadius: '0px',
+                borderBottomRightRadius: '0',
+                backgroundColor: '#fdf8ed',
+            }}
+        >
+            <CardHeader
+                style={{
+                    borderBottom: '1px solid #f4d27b',
+                    backgroundColor: '#f9ebc8',
+                }}
+            >
                 <Heading size="sm">The React blog</Heading>
             </CardHeader>
 
@@ -16,7 +29,16 @@ export const SidebarItems = () => (
                 </Box>
             </CardBody>
         </Card>
-        <Card style={{ border: '1px solid #f4d27b', boxShadow: 'none' }}>
+        <Card
+            style={{
+                border: '1px solid #f4d27b',
+                borderTop: 'none',
+                borderTopLeftRadius: '0',
+                borderTopRightRadius: '0',
+                boxShadow: 'none',
+                backgroundColor: '#fdf8ed',
+            }}
+        >
             <CardHeader style={{ borderBottom: '1px solid #f4d27b', backgroundColor: '#f9ebc8' }}>
                 <Heading size="sm">Technologies used</Heading>
             </CardHeader>
