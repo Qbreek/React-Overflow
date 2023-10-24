@@ -2,7 +2,7 @@
     display: flex;
     border-bottom: 1px solid #babfc5;
     gap: 2rem;
-    padding: 1rem 0 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .question-item-statistics {
@@ -18,6 +18,31 @@
     gap: 0.6rem;
 }
 
+.question-item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags-container {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.owner-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.tags-container,
+.owner-container,
 .question-item-statistics > li {
+    list-style: none;
     white-space: nowrap;
+}
+
+.tags-container,
+.owner-container > li {
+    font-size: 11px;
 }

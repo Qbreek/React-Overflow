@@ -41,3 +41,29 @@ main::-webkit-scrollbar {
     color: white;
     text-align: center;
 }
+
+@media only screen and (max-width: 1080px) {
+    #app {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 25% auto;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            'header header '
+            'nav main '
+            'footer footer';
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #app {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            'header'
+            'main '
+            'footer';
+    }
+}
