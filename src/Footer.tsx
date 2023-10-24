@@ -1,3 +1,1 @@
-export function Footer() {
-    return <footer>I am the footer</footer>;
-}
+export const Footer = () => <footer>This app is a learning exercise for React </footer>;
