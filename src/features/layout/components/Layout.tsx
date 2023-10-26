@@ -9,12 +9,15 @@ import { AllQuestions } from '../../all-questions/components/AllQuestions';
 export const Layout = () => (
     <div id="app">
         <Header />
+        {/* Left side */}
         <Show breakpoint="(min-width: 600px)">
             <SidebarNav />
         </Show>
+        {/* Router outlet */}
         <main>
             <AllQuestions />
         </main>
+        {/* Right side */}
         <Show breakpoint="(min-width: 1080px)">
             <SidebarItems />
         </Show>

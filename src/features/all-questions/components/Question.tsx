@@ -1,5 +1,6 @@
 import { Link, Tag, TagLabel } from '@chakra-ui/react';
 import './Question.css';
+import calcElapsedMinutes from './utils/calcElapsedMinutes';
 
 export interface QuestionProps {
     tags: string[];
@@ -34,8 +35,10 @@ interface Owner {
 export const Question = (props: QuestionProps) => (
     <article className="question-item">
         <ul className="question-item-statistics">
-            <li>{props.answer_count} answers</li>
-            <li>{props.view_count} views</li>
+            <li className={props.answer_count > 0 ? 'is-answered' : ''}>
+                {props.answer_count} {props.answer_count === 1 ? 'answer' : 'answers'}
+            </li>
+            <li style={{ color: '#636b74' }}>{props.view_count} views</li>
         </ul>
         <section className="question-item-body">
             <Link color="teal.600" href={props.link}>
@@ -68,11 +71,8 @@ export const Question = (props: QuestionProps) => (
                 <li>
                     <b>{props.owner.reputation}</b>
                 </li>
-                <li>asked {calcElapsedMinutesSinceCreation(props.creation_date)} minutes ago</li>
+                <li>asked {calcElapsedMinutes(props.creation_date)} minutes ago</li>
             </ul>
         </section>
     </article>
 );
-
-const calcElapsedMinutesSinceCreation = (unix: number) =>
-    Math.floor((Date.now() - unix * 1000) / (1000 * 60));

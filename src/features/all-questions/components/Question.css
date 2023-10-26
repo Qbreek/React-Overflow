@@ -46,3 +46,7 @@
 .owner-container > li {
     font-size: 11px;
 }
+
+.is-answered {
+    color: #18864b;
+}
