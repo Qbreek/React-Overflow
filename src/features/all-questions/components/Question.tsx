@@ -1,6 +1,6 @@
 import { Link, Tag, TagLabel } from '@chakra-ui/react';
 import './Question.css';
-import calcElapsedMinutes from './utils/calcElapsedMinutes';
+import calcElapsedMinutes from '../utils/calcElapsedMinutes';
 
 export interface QuestionProps {
     tags: string[];

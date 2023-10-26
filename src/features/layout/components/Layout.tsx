@@ -3,8 +3,8 @@ import { Header } from './Header';
 import { SidebarItems } from './SidebarItems';
 import { Footer } from './Footer';
 import { SidebarNav } from './SidebarNav';
-import './Layout.css';
 import { AllQuestions } from '../../all-questions/components/AllQuestions';
+import './Layout.css';
 
 export const Layout = () => (
     <div id="app">
