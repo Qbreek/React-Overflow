@@ -1,4 +1,4 @@
-import { QuestionProps } from './Question';
+import { QuestionProps } from './features/all-questions/components/Question';
 
 export const questions: QuestionProps[] = [
     {
