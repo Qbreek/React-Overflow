@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { SidebarItems } from './SidebarItems';
 import { Footer } from './Footer';
 import { SidebarNav } from './SidebarNav';
-import { AllQuestions } from '../../all-questions/components/AllQuestions';
+import { Outlet } from 'react-router-dom';
 import './Layout.css';
 
 export const Layout = () => (
@@ -15,7 +15,7 @@ export const Layout = () => (
         </Show>
         {/* Router outlet */}
         <main>
-            <AllQuestions />
+            <Outlet />
         </main>
         {/* Right side */}
         <Show breakpoint="(min-width: 1080px)">
