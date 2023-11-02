@@ -1,3 +1,9 @@
+import { Button } from '@chakra-ui/react';
+
 export const Pagination = () => {
-    return <span>Pagination works!</span>;
+    return (
+        <Button colorScheme="teal" size="lg" width="100%" borderRadius="0px">
+            Load more
+        </Button>
+    );
 };

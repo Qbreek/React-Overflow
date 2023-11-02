@@ -1,5 +1,5 @@
 // import { Actions } from './Actions';
-// import { Pagination } from './Paginations';
+import { Pagination } from './Paginations';
 import { QuestionList } from './QuestionList';
 
 export const AllQuestions = () => {
@@ -7,7 +7,7 @@ export const AllQuestions = () => {
         <>
             {/* <Actions /> */}
             <QuestionList />
-            {/* <Pagination /> */}
+            <Pagination />
         </>
     );
 };
