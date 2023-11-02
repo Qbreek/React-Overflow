@@ -2,7 +2,7 @@ import { Box, Card, CardBody, CardHeader, Flex, Heading, Link } from '@chakra-ui
 import './SidebarItems.css';
 
 export const SidebarItems = () => (
-    <section>
+    <section className="sidebar-items">
         <Card
             style={{
                 border: '1px solid #f4d27b',

@@ -38,7 +38,11 @@ export const Question = (props: QuestionProps) => (
             <li className={props.answer_count > 0 ? 'is-answered' : ''}>
                 {props.answer_count} {props.answer_count === 1 ? 'answer' : 'answers'}
             </li>
-            <li style={{ color: '#636b74' }}>{props.view_count} views</li>
+            <li style={{ color: '#636b74' }}>
+                {props.view_count > 1000 ? Math.floor(props.view_count / 1000) : props.view_count}
+
+                {props.view_count > 1000 ? 'k views' : ' views'}
+            </li>
         </ul>
         <section className="question-item-body">
             <Link color="teal.600" href={props.link}>
