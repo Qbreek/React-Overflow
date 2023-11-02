@@ -1,5 +1,5 @@
 import { Button, Text } from '@chakra-ui/react';
-import { pageAtom } from '../state/PageAtom';
+import { pageAtom } from '../state/Atoms';
 import { useAtom } from 'jotai';
 import './Pagination.css';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';

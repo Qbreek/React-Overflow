@@ -1,11 +1,11 @@
-// import { Actions } from './Actions';
+import { Actions } from './Actions';
 import { Pagination } from './Paginations';
 import { QuestionList } from './QuestionList';
 
 export const AllQuestions = () => {
     return (
         <>
-            {/* <Actions /> */}
+            <Actions />
             <QuestionList />
             <Pagination />
         </>
