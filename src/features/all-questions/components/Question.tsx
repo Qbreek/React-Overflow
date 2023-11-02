@@ -1,6 +1,7 @@
 import { Link, Tag, TagLabel } from '@chakra-ui/react';
 import './Question.css';
 import calcElapsedMinutes from '../utils/calcElapsedMinutes';
+import { nFormatter } from '../utils/nFormatter';
 
 export interface QuestionProps {
     tags: string[];
@@ -36,13 +37,10 @@ export const Question = (props: QuestionProps) => (
     <article className="question-item">
         <ul className="question-item-statistics">
             <li className={props.answer_count > 0 ? 'is-answered' : ''}>
-                {props.answer_count} {props.answer_count === 1 ? 'answer' : 'answers'}
+                {nFormatter(props.answer_count, 1)}
+                {props.answer_count === 1 ? 'answer' : 'answers'}
             </li>
-            <li style={{ color: '#636b74' }}>
-                {props.view_count > 1000 ? Math.floor(props.view_count / 1000) : props.view_count}
-
-                {props.view_count > 1000 ? 'k views' : ' views'}
-            </li>
+            <li style={{ color: '#636b74' }}>{nFormatter(props.view_count, 1)} views</li>
         </ul>
         <section className="question-item-body">
             <Link color="teal.600" href={props.link}>
