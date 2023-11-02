@@ -1,20 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { Layout } from './features/layout/components/Layout';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { AllQuestions } from './features/all-questions/components/AllQuestions';
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Layout />,
-        children: [
-            {
-                path: 'questions',
-                element: <AllQuestions />,
-            },
-        ],
-    },
-]);
+import { RouterProvider } from 'react-router-dom';
+import { router } from './Routes';
 
 const App = () => {
     return (
