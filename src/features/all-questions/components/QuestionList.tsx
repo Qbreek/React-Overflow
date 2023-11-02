@@ -1,4 +1,4 @@
-import { Spinner } from '@chakra-ui/react';
+import { Center, Spinner } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { Question, QuestionProps } from './Question';
 
@@ -18,13 +18,15 @@ export const QuestionList = () => {
     return (
         <ul>
             {isLoading ? (
-                <Spinner
-                    thickness="4px"
-                    speed="0.65s"
-                    emptyColor="gray.200"
-                    color="blue.500"
-                    size="xl"
-                />
+                <Center h="100vh" color="white">
+                    <Spinner
+                        thickness="4px"
+                        speed="0.65s"
+                        emptyColor="gray.200"
+                        color="blue.500"
+                        size="xl"
+                    />
+                </Center>
             ) : (
                 questions.map((question) => (
                     <li>
