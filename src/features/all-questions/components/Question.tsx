@@ -37,7 +37,7 @@ export const Question = (props: QuestionProps) => (
     <article className="question-item">
         <ul className="question-item-statistics">
             <li className={props.answer_count > 0 ? 'is-answered' : ''}>
-                {nFormatter(props.answer_count, 1)}
+                {nFormatter(props.answer_count, 1)}{' '}
                 {props.answer_count === 1 ? 'answer' : 'answers'}
             </li>
             <li style={{ color: '#636b74' }}>{nFormatter(props.view_count, 1)} views</li>
