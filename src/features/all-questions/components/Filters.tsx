@@ -5,13 +5,9 @@ import { filterAtom } from '../state/Atoms';
 export const Filters = () => {
     const [filter, setFilter] = useAtom(filterAtom);
 
-    const handleFilterChange = (nextValue: string) => {
-        setFilter(nextValue);
-    };
-
     return (
         <>
-            <RadioGroup onChange={(v) => handleFilterChange(v)} value={filter} size="sm">
+            <RadioGroup onChange={setFilter} value={filter} size="sm">
                 <Flex direction="row" gap="1.5" wrap="wrap">
                     <Radio value="activity">Activity</Radio>
                     <Radio value="creation">Creation</Radio>
