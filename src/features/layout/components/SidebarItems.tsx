@@ -60,6 +60,11 @@ export const SidebarItems = () => (
                             Typescript
                         </Link>
                     </Box>
+                    <Box>
+                        <Link href="https://jotai.org/" fontSize="sm">
+                            Jotai
+                        </Link>
+                    </Box>
                 </Flex>
             </CardBody>
         </Card>

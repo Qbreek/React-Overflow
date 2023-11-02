@@ -1,19 +1,24 @@
 import { Center, Spinner } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { Question, QuestionProps } from './Question';
+import { pageAtom } from '../state/PageAtom';
+import { useAtom } from 'jotai';
 
 export const QuestionList = () => {
     const [questions, setQuestions] = useState<QuestionProps[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [page] = useAtom(pageAtom);
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('https://api.stackexchange.com/2.3/questions?page=1&order=desc&site=stackoverflow')
+        fetch(
+            `https://api.stackexchange.com/2.3/questions?page=${page}&order=desc&site=stackoverflow`
+        )
             .then((res) => res.json())
             .then((data) => setQuestions(data.items))
             .catch((error) => console.log(error))
             .finally(() => setIsLoading(false));
-    }, []);
+    }, [page]);
 
     return (
         <ul>
