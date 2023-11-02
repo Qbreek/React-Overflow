@@ -8,9 +8,7 @@ export const QuestionList = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(
-            'https://api.stackexchange.com/2.3/questions?page=1&order=desc&sort=creation&site=stackoverflow'
-        )
+        fetch('https://api.stackexchange.com/2.3/questions?page=1&order=desc&site=stackoverflow')
             .then((res) => res.json())
             .then((data) => setQuestions(data.items))
             .catch((error) => console.log(error))
