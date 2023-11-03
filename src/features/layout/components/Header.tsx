@@ -1,4 +1,6 @@
 import { DragHandleIcon, HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
+import { Link as ReactRouterLink } from 'react-router-dom';
+
 import './Header.css';
 import {
     IconButton,
@@ -46,14 +48,10 @@ export const Header = () => (
                         size="sm"
                     />
                     <MenuList>
-                        <MenuItem as="a" href="#">
-                            About
-                        </MenuItem>
-                        <MenuItem as="a" href="#">
-                            Products
-                        </MenuItem>
-                        <MenuItem as="a" href="#">
-                            For Teams
+                        <MenuItem>
+                            <Link as={ReactRouterLink} to="/questions">
+                                All Questions
+                            </Link>
                         </MenuItem>
                     </MenuList>
                 </Menu>
